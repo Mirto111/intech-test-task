@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+}
+.registration {
+    width: 30%;
+    margin: auto auto 10px;
+}
+.login {
+    margin: auto;
+    width: 30%;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.submit {
+    background-color: cadetblue;
+    border: 1px solid cadetblue;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="js/chat.js" type="text/javascript"></script>
+    <script src="js/sockjs.min.js" type="text/javascript"></script>
+    <script src="js/stomp.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="chat-messages">
+    <a href="/logout">Logout</a>
+    <span class="user"  th:text="'Username: ' + ${username}"></span>
+    <h2>Chat Messages</h2>
+    <div th:each="message: ${messages}">
+        <div class="container">
+            <span class="name-left" th:text="${message.from}"></span>
+            <p class="mess" th:text="${message.text}"></p>
+            <span class="time-right" th:text="${message.dateTime}"></span>
+
+        </div>
+    </div>
+</div>
+<div>
+    <textarea id="text-message" rows="3" name="text-message" placeholder="Введите сообщение"></textarea>
+    <button class="button" type="submit">Отправить</button>
+</div>
+</body>
+</html>

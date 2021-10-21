@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/registration.css"/>
+</head>
+<body>
+<div class="container">
+    <p th:text="${registerError}"></p>
+    <form action="/register" method="post">
+    <div class="registration">
+        <h2>Registration</h2>
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Введите Имя Пользователя" name="name" required>
+        <label><b>Login</b></label>
+        <input type="text" placeholder="Введите Логин" name="login" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Введите пароль" name="password" required>
+        <input type="hidden" value="ROLE_USER" name="roles">
+        <button class="submit" type="submit">Зарегистрироваться</button>
+    </div>
+    </form>
+    <div class="login">
+        <a href="/login">Go to Login</a>
+    </div>
+</div>
+</body>
+</html>
